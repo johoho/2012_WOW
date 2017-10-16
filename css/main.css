@@ -1,0 +1,769 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/*  Google Web Fonts: 
+ 	font-family: 'Griffy', cursive;
+	font-family: 'IM Fell Double Pica SC', serif;
+	font-family: 'Raleway', sans-serif;
+	font-family: 'Dosis', sans-serif;
+	font-family: 'Poiret One', cursive;
+	font-family: 'Source Code Pro', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
+*/
+header nav, footer, .content h2 {
+	font-family: 'IM Fell Double Pica SC', serif;
+
+}	
+
+header nav, .callToAction{
+		line-height: 2em;
+		letter-spacing: 0.4em;
+}
+.wow {
+	letter-spacing:normal;
+}
+
+.content {
+	font-family: 'Dosis', sans-serif;
+}
+
+header nav, .callToAction, .content, .socialMedia{
+	border: 5px dotted #D74C88;
+}
+
+header nav, .callToAction nav, .content, .socialMedia a {
+	box-shadow: 5px 5px 25px 2px #FFEBCD;
+}	
+/*===================================================== */	  
+header {
+	float: left;
+	padding: 5px;
+	text-align: center;
+}
+
+nav {
+	margin: 5px;
+	padding: 5px;
+	background-color: #FFFFFF;
+	opacity: 0.85;
+
+}
+nav a {
+	text-decoration: none;
+	display: block;
+	color: #000000;
+}
+
+nav a:visited{
+	color: #000000;
+}
+
+header nav {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+	z-index: 3;
+}
+
+header nav a {
+	margin-top: 8px;
+}
+.selected {
+	letter-spacing: 0.1em;
+	color: #D74C88;
+}
+
+footer {
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	z-index: 1;
+}
+
+.callToAction {
+	float: right;
+}
+
+.callToAction nav{
+	display: block;
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.callToAction a {
+	margin: 10px auto;
+}
+
+.callToAction nav:hover {
+	background-color: #D74C88
+}
+
+.disclaimer {
+	width: 100%;
+	margin-left: auto;
+	float: right;
+	text-align: center;
+	font-size: 0.8em;
+	color: #FFFFFF;
+}
+
+.disclaimer p{
+	width: 80%;
+	margin: auto;
+}
+/* ==|== Social Icons =======================================================
+   Sprites and rollovers
+   ========================================================================== */
+
+.socialMedia {
+	float: right;
+	height: 240px;
+	width: 40px;
+	background-color: transparent;
+}
+
+.socialMedia ul {
+	margin-top: 57px;
+}
+
+.socialMedia li a{
+	width:42px;height:42px;text-indent:-1200px;overflow:hidden;
+	position:relative; left: -42px;
+	border-radius: 50%;background-color:#FFFFFF;
+}
+
+    #icon_facebook,
+    #icon_twitter,
+    #icon_youtube{background:url('../img/socialMedia_sprite.gif') white 0 0 no-repeat;}
+
+    #icon_facebook{background-position: -54px -2px;}
+    #icon_twitter{background-position:-54px -48px;}
+    #icon_youtube{background-position:-53px -91px;}
+
+    #icon_facebook:hover{background-position:-8px -2px;}
+    #icon_twitter:hover{background-position:-8px -48px;}
+	#icon_youtube:hover{background-position:-8px -91px;}
+
+/* ==|== content div styles =======================================================
+
+   ========================================================================== */
+
+.draggable{cursor: move;}
+
+.content {
+	width: 600px;
+	height: 600px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%px;
+	-moz-border-radius: 50%px;
+	margin:2% auto;
+	position: fixed;
+	left: 25%;
+	background-color: #000000;
+	text-align: center;
+	overflow: hidden;
+	opacity: 0.85;
+	z-index: 2;
+}
+
+.content article{
+	margin: 0 auto;
+	position: static;
+}
+
+.content article:nth-child(even){
+	background-color: #F9F9F9;
+	overflow: hidden;
+	z-index: 1;
+}
+
+#wowStory {
+	overflow: hidden;
+}
+
+/*.content article:not(first-child){
+	box-shadow: -5px -5px 10px #778899;
+}*/
+.content article:nth-child(odd){
+	color:#FFFFFF;
+}
+
+.content article:last-child {
+	padding-bottom: 150px;
+}
+
+.content h2 {
+	color: #D74C88;
+	margin: 0;
+	padding: 15px;
+}
+
+.content p {
+	width: 400px;
+	margin: auto;
+	font-size: 1.1em;
+}
+
+.content table {
+	width: 350px;
+	margin: auto;
+/*	margin-top: 10px;*/
+	text-align: left;
+}
+
+.insideContent {
+	width: 400px;
+	margin: 0 auto 15px;
+}
+
+.insideContent_wide{
+	width: 500px;
+	height: 300px;
+	margin: 0 auto 15px;
+	overflow-y:scroll;
+}
+
+.insideContent figure{
+	display: inline-block;
+	margin: 10px;
+}
+
+.insideContent_form {
+	width: 500px;
+	margin: 0 auto;
+}
+
+#entryForm div {
+	margin: 15px 0;
+}
+
+#entryForm input, #entryForm select {
+	width: 220px;
+	margin-right: 25px;
+	border-radius: 5px;
+	float: right;
+	color: black;
+}
+.prizes {
+	text-align: left;
+}
+.prizes h2 {text-align: center;}
+
+#accordion, #accordion ul {
+	text-align: center;
+	display: block;
+	padding: 0;
+}
+
+#accordion li {
+	display: block;
+	text-align: left;
+	margin: 15px 0;
+}
+
+button {
+	font-family: 'Griffy', cursive;
+	color: #D74C88;
+	padding: 5px; 
+	margin: 5px;
+	z-index: 4;
+}
+
+#buyTix {z-index: 4;}
+
+#pgReload {
+	position: fixed;
+	bottom: 50px;
+	left: 10px;
+	z-index: 4;
+}
+
+#tickets a {
+	color:#D74C88;
+}
+
+#tickets a:visited {
+	color:#D74C88;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #D74C88 url(../img/spinner.gif) no-repeat scroll center center;
+/*  z-index: 120;*/
+}
+
+
+#lightbox {
+  position: fixed;
+}
+
+#designers a.lightbox {
+	float: left;
+	margin: 3px 15px 3px 0;
+	height: 100px;
+}
+#story {
+	position: absolute;
+}
+#story p {
+	display: inline-block;
+	text-align: left;
+	font-size: 2em;
+ 	font-family: 'Griffy', cursive;
+	height: 50px;
+	padding-left: 50px;
+	width: 20000px;
+	overflow: hidden;
+	position: absolute;
+/*	top: 250px;*/
+	background-color: black;
+	opacity: 0.8;
+	z-index: 5px;
+}
+
+/*#wowStory article:first-child{
+	padding-bottom: 50px;
+}*/
+/*#frame{
+	position: absolute;
+	top: 10px;
+	z-index: 1;
+}*/
+/* ==========================================================================
+ Gallery Styles
+   ========================================================================== */
+/**{border: 1px solid green;}*/
+
+.photos {
+	height: 100px;
+	width: 500px;
+	margin: 5px auto;
+	overflow: hidden;
+}
+
+.photos_inner {
+	height: 100px;
+	width: 800px;
+	overflow: hidden;
+	position: relative;
+}
+
+.photos_inner img{
+	float: left;
+	height: 100px;
+}
+
+/*#photos p {
+	height: 100px;
+	width: 5px;
+  	position: relative;
+  	top: 50px;
+  	left: 10px;
+}*/
+.gallery_bg {
+	background-color: #000;
+	height: 100%;
+}
+
+
+
+.carousel1 {
+	width: 100%;
+	height: 500px;
+	margin: 0 auto;
+}
+
+#videos {
+	
+}
+.vid {
+	width: 330px;
+	height: 200px;
+	margin: 50px;
+}
+
+#videos iframe {
+	width: 300px;
+	height: 169px;
+	margin: 15px;
+}	
+
+#videos .thumbs iframe {
+	width: 201px;
+	height: 113px;
+	margin: 15px;
+	display: inline-block;
+}
+
+#videos .thumbs {
+	padding: 0 50px;
+	border-top: 5px dotted white;
+	border-bottom: 5px dotted white;
+	text-align: center;
+}
+
+.prev-btn,
+.next-btn{
+	position:absolute;
+	top:150px;
+	width:40px;
+	height:50px;
+}
+
+.prev-btn:hover,
+.next-btn:hover,
+button:hover {
+	cursor:pointer;
+}
+
+.next-btn{
+	right:35px;
+	background:url(../img/next.png) no-repeat top left;
+}
+
+.prev-btn{
+	left:35px;
+	background:url(../img/prev.png) no-repeat top left;
+}
+/*.circle {
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	margin: 5px;
+	display: inline-block;
+	box-shadow: -5px -5px 10px #778899;
+}*/
+
+#videos div {
+	margin: 0 auto;
+}	
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/* ----------- !!!! for ipad portrait, move .callToAction & .socialMedia to top right !!!--------------- */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (max-width: 1020px)  {
+    /* ipad portrait */
+
+header {
+		position: fixed;
+		top: 0;
+	}   
+   
+.callToAction {
+		margin: 5px;
+		width: 300px;
+		position: fixed;
+		top: 0;
+		right: 0;
+	}
+	
+.callToAction nav:nth-child(2) {
+		position: fixed;
+		top: 0;
+		right: 0;
+	}
+	
+.socialMedia {
+		position: fixed;
+		top: 0;
+		right: 300px;
+	}
+.socialMedia ul{
+	margin-top: 5px;
+}	
+		
+.disclaimer {
+		position: fixed;
+		bottom: 5px;
+	}
+	
+.content {
+	margin: 300px 10% 0 0;
+	float: right;
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

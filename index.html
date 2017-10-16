@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html id="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html id="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html ="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>joanneHo Summative 02- WOW</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link href='http://fonts.googleapis.com/css?family=Griffy'  rel='stylesheet' type='text/css'>
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+		<style type="text/css">
+			#logo {
+				margin: auto;
+			}
+			button {
+				font-family: 'Griffy', cursive;
+				font-size: 1.2em;
+				color: #D74C88;
+				padding: 5px;
+				margin: 5px;
+			}
+
+			#main {
+				width: 100%;
+				height: 90%;
+				text-align: center;
+			}
+
+			iframe {
+				margin: auto;
+			}
+
+			footer {
+				width: 100%;
+				height: 10%;
+				text-align: center;
+			}
+
+			.disclaimer {
+				width: 80%;
+				margin: auto;
+				color: white;
+				font-size: 0.7em;
+			}
+
+			#logo {
+				width: 10%;
+			}
+		</style>
+
+	</head>
+	<body style="background-color: black">
+		<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<div id="main">
+			<img id="logo" src="img/WOW-_BIG_Logo_white.png" />
+				<iframe id="ytplayer" type="text/html" width="640" height="360"
+<iframe width="853" height="480" src="https://www.youtube.com/embed/vmJsWq4aQV8?autoplay=1&controls=0&autohide=1" frameborder="0" allowfullscreen></iframe>
+			<!-- <div id="ytplayer"></div> -->
+
+		</div>
+		<footer>
+			<a href="home.html" style="color: white">
+			<button>
+				Skip Video
+			</button></a>
+			<div class="disclaimer">
+				<p>
+					This is not the official website for the World of WearablArt<sup>tm</sup>. This project was built for educational purposes and is in no way affiliated with the represented brand.
+					All images and branding &copy; World of WearableArt<sup>tm</sup>, website design &copy; Joanne Ho 2012
+				</p>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script>
+			window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')
+		</script>
+
+		<script src="js/vendor/jquery-1.8.2.min.js"></script>
+
+	<!--	<script type="text/javascript">
+			//<![CDATA[
+
+			// Load the IFrame Player API code asynchronously.
+			var tag = document.createElement('script');
+			tag.src = "https://www.youtube.com/player_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			// Replace the 'ytplayer' element with an <iframe> and
+			// YouTube player after the API code downloads.
+			var player;
+			/*
+			var winWidth = window.width();
+						 if (winWidth <= 800) {function onYouTubePlayerAPIReady() {
+						 player = new YT.Player('ytplayer', {
+						 height: '390',
+						 width: '640',
+						 videoId: 'vmJsWq4aQV8',
+						 playerVars : {
+									'autoplay' : 1,
+									'controls' : 0
+								}
+						 });
+						 }}
+												   else if (winWidth <=480) {
+							 function onYouTubePlayerAPIReady() {
+								 player = new YT.Player('ytplayer', {
+									 height: '270',
+									 width: '480',
+									 videoID: 'vmJsWq4aQV8',
+									 playerVars : {
+									'autoplay' : 1,
+									'controls' : 0
+								}
+								 });
+							 }
+						 } else if (winWidth <= 1024) {
+							 function onYouTubePlayerAPIReady() {
+								 player = new YT.Player('ytplayer', {
+									 height: '576',
+									 width: '1024',
+									 videoID: 'vmJsWq4aQV8',
+									 playerVars : {
+									'autoplay' : 1,
+									'controls' : 0
+								}
+								 });
+							 }
+													   } else {
+							 function onYouTubePlayerAPIReady() {
+								 player = new YT.Player('ytplayer', {
+									 height: '720',
+									 width: '1280',
+									 videoID: 'vmJsWq4aQV8',
+									 playerVars : {
+									'autoplay' : 1,
+									'controls' : 0
+								}
+								 });
+							 }
+						 }
+			*/
+			
+		
+			function onYouTubeIframeAPIReady() {
+						var player = "#ytplayer";
+						player = new YT.Player('player', {
+							videoId : 'vmJsWq4aQV8',
+							playerVars : {
+								'autoplay' : 1,
+								'controls' : 0
+							},
+							events : {
+								'onReady' : onPlayerReady,
+								'onPlaybackQualityChange' : onPlayerPlaybackQualityChange,
+								'onStateChange' : onPlayerStateChange,
+								'onError' : onPlayerError
+							}
+						});
+					}
+		/*
+					function onStateChange(event) {
+						if (event.data == 0 || event.data == 2) {
+							window.open(URL, "home.html");
+						}
+					}*/
+		
+
+			//]]>
+		</script> -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("iframe").hide();
+
+				var winWidth = $(window).width();
+
+				// Modernizr.mq('only screen and (min-width: 480px)').
+				$("#logo").animate({
+					'width' : "800px"
+				}, 3000, function() {
+					$(this).hide();
+					$("iframe").show();
+				})
+			});
+		</script>
+	</body>
+</html>
